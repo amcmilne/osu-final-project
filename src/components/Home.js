@@ -18,7 +18,7 @@ class Home extends React.Component {
     this.insertGapiScript();
   }
   initializeGoogleSignin() {
-    window.gapi.load("auth2", () => {
+    window.gapi.load("auth2", () => {      
       window.gapi.auth2.init({
         client_id:
           "341203008031-9plv62cjqc2uj6qbg2aqmv8dk17amd0l.apps.googleusercontent.com",
@@ -27,9 +27,17 @@ class Home extends React.Component {
 
       window.gapi.load("signin2", () => {
         const params = {
-          onsuccess: () => {
-            console.log("user sign in complete");
+          onsuccess: (x) => {
+            console.log("user sign in complete");   
+            if(x.Qs.zt === "amcmilne@gmail.com")
+            {
+              console.log("user match");    
+            }
+            
           },
+          onfailure: () => {
+            console.log("user signin error");
+          }
         };
         window.gapi.signin2.render("loginButton", params);
       });
