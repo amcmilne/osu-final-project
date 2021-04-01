@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Login from "./components/Login";
+//import Login from "./components/Login";
 import Home from "./components/Home";
 import Main from "./components/Main";
 import Labor from "./components/Labor";
@@ -12,52 +12,52 @@ import Oldbids from "./components/Oldbids";
 import "./index.css";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      isSignedIn: null,
-    };
-  }
+  //   this.state = {
+  //     isSignedIn: null,
+  //   };
+  // }
 
-  initializeGoogleSignin() {
-    window.gapi.load("auth2", () => {
-      window.gapi.auth2
-        .init({
-          client_id:
-            "341203008031-9plv62cjqc2uj6qbg2aqmv8dk17amd0l.apps.googleusercontent.com",
-        })
-        .then(() => {
-          const isSignedIn = window.gapi.auth2
-            .getAuthInstance()
-            .isSignedIn.get();
-          this.setState({ isSignedIn });
-        });
-    });
-  }
+  // initializeGoogleSignin() {
+  //   window.gapi.load("auth2", () => {
+  //     window.gapi.auth2
+  //       .init({
+  //         client_id:
+  //           "341203008031-9plv62cjqc2uj6qbg2aqmv8dk17amd0l.apps.googleusercontent.com",
+  //       })
+  //       .then(() => {
+  //         const isSignedIn = window.gapi.auth2
+  //           .getAuthInstance()
+  //           .isSignedIn.get();
+  //         this.setState({ isSignedIn });
+  //       });
+  //   });
+  // }
 
-  componentDidMount() {
-    const script = document.createElement("script");
-    script.src = "https://apis.google.com/js/platform.js";
-    script.onload = () => {
-      this.initializeGoogleSignin();
-    };
-    document.body.appendChild(script);
-  }
+  // componentDidMount() {
+  //   const script = document.createElement("script");
+  //   script.src = "https://apis.google.com/js/platform.js";
+  //   script.onload = () => {
+  //     this.initializeGoogleSignin();
+  //   };
+  //   document.body.appendChild(script);
+  // }
 
-  ifUserSignedIn(Component) {
-    if (this.state.isSignedIn === null) {
-      return <h1>checking to see if you are signed in...</h1>
-    }
-    return this.state.isSignedIn ? <Component /> : <Login />;
-  }
+  // ifUserSignedIn(Component) {
+  //   if (this.state.isSignedIn === null) {
+  //     return <h1>checking to see if you are signed in...</h1>
+  //   }
+  //   return this.state.isSignedIn ? <Component /> : <Login />;
+  // }
   render() {
     return (
       <div>
         <Router>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
-          <Route path="/main" render={() => this.ifUserSignedIn(Main)} />
+          <Route path="/main" component={Main} />
           <Route path="/labor" component={Labor} />
           <Route path="/Oldbids" component={Oldbids} />
           <Route path="/Newbids" component={Newbids} />
