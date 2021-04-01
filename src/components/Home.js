@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 import companyLogo from "../firstpaint.jpg";
 
@@ -26,11 +27,6 @@ class Home extends React.Component {
 
       window.gapi.load("signin2", () => {
         const params = {
-          scope: "profile email",
-          width: 240,
-          height: 50,
-          longtitle: true,
-          theme: "dark",
           onsuccess: () => {
             console.log("user sign in complete");
           },
@@ -45,10 +41,11 @@ class Home extends React.Component {
         <div>
           <h1 className="tc"> Paint Bid App</h1>
           <img className=" w-100 " src={companyLogo} alt="logo" />
+          <Link to="/main">Go to Main</Link>
         </div>
         <div>
           <div className="row">
-            <div className="gID" id="loginButton">Signin with Google</div>
+            <div id="loginButton">Signin with Google</div>
           </div>
         </div>
       </div>

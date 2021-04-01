@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Login from "./components/Login";
 import Home from "./components/Home";
 import Main from "./components/Main";
 import Labor from "./components/Labor";
@@ -15,7 +16,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      isSignedIn: false,
+      isSignedIn: null,
     };
   }
 
@@ -45,15 +46,18 @@ class App extends React.Component {
   }
 
   ifUserSignedIn(Component) {
-    return this.state.isSignedIn ? <Component /> : <Home />;
+    if (this.state.isSignedIn === null) {
+      return <h1>checking to see if you are signed in...</h1>
+    }
+    return this.state.isSignedIn ? <Component /> : <Login />;
   }
   render() {
     return (
       <div>
         <Router>
           <Route exact path="/" component={Home} />
-          <Route path="/home" render={() => this.ifUserSignedIn(Main)} />
-          <Route path="/main" component={Main} />
+          <Route path="/home" component={Home} />
+          <Route path="/main" render={() => this.ifUserSignedIn(Main)} />
           <Route path="/labor" component={Labor} />
           <Route path="/Oldbids" component={Oldbids} />
           <Route path="/Newbids" component={Newbids} />
