@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import "./CSS/theme.css"
-
+import "./CSS/theme.css";
+import "./CSS/paint.scss";
 function Paint() {
     return (
         <div>
@@ -12,11 +12,12 @@ function Paint() {
                  <option value="Affordable"> Affordable </option>
                  <option value="Standard">Standard</option>
                  <option value="Premium">Premium</option>
-             </select><br/><br/>
+             </select><br/>
+             
              <h1>Paint Notes</h1> 
-             <textarea name="text" cols="25" rows="5" placeholder="Add text here!!"></textarea><br/><br/>
+             <textarea name="text" cols="25" rows="5" placeholder="Add text here!!"></textarea><br/>
              <h1> Sq Ft of House</h1>
-             <input placeholder="1500 sq ft"></input> <br/><br/>
+             <input placeholder="1500 sq ft"></input> <br/>
  
              <div>
                  <button> <Link to="/newbids"> Back</Link></button>

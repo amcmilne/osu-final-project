@@ -1,0 +1,9 @@
+div.container {
+  overflow: auto;
+  padding: 3rem;
+}
+div.container select {
+  display: block;
+}
+
+/*# sourceMappingURL=paint.css.map */
