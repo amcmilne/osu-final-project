@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap');
 
 div.container{
     text-align: center;
-    border: 3px black solid;
-    background-color: rgb(175, 136, 64, .5);
-    border-radius: 3rem;
-    margin: 0 auto;
+    border: 3px white solid;
+    background-color: rgba(15, 31, 53, 0.52);
+    border-radius: 2rem;
+    margin: 10% auto;
+    box-shadow: .1px 3px 120px 5px black;
+    padding: 2rem;
+    max-height: 33.5rem;
+    /* overflow: auto; */
+}
 
+body, html {
+    background:url("../../firstpaint.jpg") fixed center;
+    max-height: 80%;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+div.myUl {
+    overflow: scroll;
+    height: 8rem;
+}
+h1,h2,h3 {
+    font-family: 'Righteous', cursive;
+    text-shadow:  3px 6px  black;
 }
