@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import Dexie from 'dexie';
+import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
 
-  //... create db
-  const db = new Dexie("bidDatabase");
-  db.version(1).stores({
-    clients: "++id, name, address, email",
-  })
+//... create db
+const db = new Dexie("bidDatabase");
+db.version(1).stores({
+  clients: "++id, name, address, email",
+});
 
 const Newbids = () => {
-//... variable to store clients
+  //... variable to store clients
   const allClients = useLiveQuery(() => db.clients.toArray(), []);
-  if (!allClients) return null
-  
+  if (!allClients) return null;
+
   //... add client
   const addClientToDb = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const name = document.querySelector(".item-name").value;
     const address = document.querySelector(".item-address").value;
     const email = document.querySelector(".item-email").value;
@@ -25,68 +25,32 @@ const Newbids = () => {
       address,
       email,
       clientBeenSaved: false,
-    })
-  }
-
-  // //... remove client
-  // const removeClientFromDb = async (id) => {
-  //   await db.items.delete(id);
-  // };
-
-  // //...update client
-  // const markAsSaved = async (id, event) => {
-  //   if (event.target.checked) {
-  //     await db.clients.update(id, { clientBeenSaved: true });
-  //   } else {
-  //     await db.clients.update(id, { clientBeenSaved: false });
-  //   }
-  // };
-
-  //...variable to hold client data
-  const clientData = allClients.map(
-    ({ id, name, address, email }) => (
-      <div className="row" key={id}>
-        <p className="col s3">
-          <label>
-            <span className="black-text">{name}</span>           
-          </label>
-        </p>
-        <p className="col s3">
-          <label>
-          <span className="black-text">{address}</span>         
-          </label>
-        </p>
-        <p className="col s3">
-          <label>
-          <span className="black-text">{email}</span>         
-          </label>
-        </p>
-      
-            
-      </div>
-    )
-  )
+    });
+  };
 
   return (
     <div>
       <div className="container">
-        <h3 className="text center-align">New Bids</h3>
+        <h1>New Bids</h1>
         <form
           className="add-item-form"
           onSubmit={(event) => addClientToDb(event)}
         >
+          <label for="Name"> Name: </label>
           <input
             type="text"
             className="item-name"
-            placeholder="Name"
+            placeholder="First and Last Name"
             required
           />
+           <label for="Address"> Street Address: </label>
           <input
             type="text"
             className="item-address"
-            placeholder="Address"
+            placeholder="Please include City and State"
             required
           />
+          <label for="Email"> Email: </label>
           <input
             type="text"
             className="item-email"
@@ -97,25 +61,15 @@ const Newbids = () => {
             Add Client
           </button>
         </form>
-        {allClients.length > 0 && 
-          <div className="card">
-            <div className="card-content-round">
-              <form action="#">
-                {clientData}
-                </form>
-            </div>
-          </div>
-        }
-         <button>
-       <Link to="/main"> Back</Link>
-     </button>
-     <button>
-       <Link to="/paint"> Paint</Link>
-       </button>
+        <button>
+          <Link to="/main"> Back</Link>
+        </button>
+        <button>
+          <Link to="/paint"> Paint</Link>
+        </button>
       </div>
-      
-       </div>
-    )
-}
+    </div>
+  );
+};
 
 export default Newbids;
