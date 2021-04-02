@@ -4,6 +4,19 @@ div.container{
     border: 3px black solid;
     background-color: rgb(175, 136, 64, .5);
     border-radius: 3rem;
-    margin: 0 auto;
+    margin: 10% auto;
+    box-shadow: .4px 3px 8px .8px black;
+    padding: 2rem;
+    max-height: 33.5rem;
+    /* overflow: auto; */
+}
 
+body, html {
+    background:url("../../firstpaint.jpg") fixed center;
+    max-height: 80%;
+}
+
+div.myUl {
+    overflow: scroll;
+    height: 8rem;
 }
