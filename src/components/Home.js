@@ -46,14 +46,16 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <h1 className="tc"> Paint Bid App</h1>
-          <img className=" w-100 " src={companyLogo} alt="logo" />
-          {/* <Link to="/main">Go to Main</Link> */}
-        </div>
-        <div>
-          <div className="row">
-            <div id="loginButton">Signin with Google</div>
+        <div class="container">
+          <div>
+            <h1 className="tc"> Paint Bid App</h1>
+            {/* <img className=" w-100 " src={companyLogo} alt="logo" /> */}
+            {/* <Link to="/main">Go to Main</Link> */}
+          </div>
+          <div>
+            <div className="row">
+              <div id="loginButton">Signin with Google</div>
+            </div>
           </div>
         </div>
       </div>
