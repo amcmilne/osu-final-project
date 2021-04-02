@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
 import "./CSS/paint.scss";
+import Mobilenav from "./Mobilenav";
 
 //... create db
 const db = new Dexie("paintDatabase");
@@ -59,14 +60,8 @@ function Paint() {
             Add Paint Info
           </button>
         </form>
-        <div>
-          <button>
-            <Link to="/newbids"> Back</Link>
-          </button>
-          <button>
-            <Link to="/materials"> Materials</Link>
-          </button>
-        </div>
+        <Mobilenav back="/newbids" next="/materials" name="Materials"/>
+
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
+import Mobilenav from "./Mobilenav";
 
 //... create db
 const db = new Dexie("quoteDatabase");
@@ -115,14 +116,7 @@ function Quote() {
           <br />
           <br />
         </form>
-        <div>
-          <button>
-            <Link to="/labor"> Back</Link>
-          </button>
-          <button>
-            <Link to="/main"> Finish</Link>
-          </button>
-        </div>
+        <Mobilenav back="/labor" next="/main" name="Finish"/>
       </div>
     </div>
   );

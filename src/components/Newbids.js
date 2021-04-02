@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
 import "./CSS/newbids.scss";
-
+import Mobilenav from "../components/Mobilenav"
 
 
 //... create db
@@ -63,12 +63,7 @@ const Newbids = () => {
             Add Client
           </button>
         </form>
-        <button>
-          <Link to="/main"> Back</Link>
-        </button>
-        <button>
-          <Link to="/paint"> Paint</Link>
-        </button>
+        <Mobilenav back="/main" next="/paint" name="Paint"/>
       </div>
     </div>
   );
