@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
+import Mobilenav from './Mobilenav';
 
 //... create db
 const db = new Dexie("materialsDatabase");
@@ -34,32 +35,27 @@ const Materials = () => {
         <div>
             <div className="container">
 
-            <h1>Materials</h1>  
-            <form
-              className="add-item-form"
-              onSubmit={(event) => addMaterialsToDb(event)}
-            >  
-            <label for="MaskingPastic"> Masking Plastic </label>
-                 <input type="number" className="item-maskingplastic" placeholder="Rolls of Plastic"/><br/>
-             <label for="MaskingPaper"> Masking Paper </label>
-                 <input type="number" className="item-maskingpaper" placeholder="Rolls of Paper"/><br/>
-             <label for="Tape"> Tape </label>
-                 <input type="number" className="item-tape" placeholder="Rolls of Tape"/><br/>
-             <label for="Caulking">Caulking </label>
-                 <input type="number" className="item-caulk" placeholder="Tubes of Caulk"/><br/>
-             <label for="Primer"> Primer </label>
-                 <input type="number" className="item-primer" placeholder="Cans of Primer"/><br/><br/>
+                <h1>Materials</h1>  
+                <form
+                className="add-item-form"
+                onSubmit={(event) => addMaterialsToDb(event)}
+                >  
+                    <label for="MaskingPastic"> Masking Plastic </label>
+                        <input type="number" className="item-maskingplastic" placeholder="Rolls of Plastic"/><br/>
+                    <label for="MaskingPaper"> Masking Paper </label>
+                        <input type="number" className="item-maskingpaper" placeholder="Rolls of Paper"/><br/>
+                    <label for="Tape"> Tape </label>
+                        <input type="number" className="item-tape" placeholder="Rolls of Tape"/><br/>
+                    <label for="Caulking">Caulking </label>
+                        <input type="number" className="item-caulk" placeholder="Tubes of Caulk"/><br/>
+                    <label for="Primer"> Primer </label>
+                        <input type="number" className="item-primer" placeholder="Cans of Primer"/><br/><br/>
 
-                 <button type="submit" className="waves-effect waves-light btn center">
-            Add Materials
-          </button>
-          </form>
- 
-             <div>
-                 <button> <Link to="/paint"> Back</Link></button>
-                 <button> <Link to="/labor"> Labor</Link></button>
-             </div>
- 
+                        <button type="submit" className="waves-effect waves-light btn center">
+                    Add Materials
+                </button>
+                </form>
+                <Mobilenav back="/paint" next="/labor" name="Labor"/>
             </div>
  
         </div>
