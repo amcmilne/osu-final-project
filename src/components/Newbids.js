@@ -27,7 +27,6 @@ const Newbids = () => {
       name,
       address,
       email,
-      clientBeenSaved: false,
     });
   };
 
@@ -60,7 +59,7 @@ const Newbids = () => {
             placeholder="Email"
             required
           />
-          <button type="submit" className="waves-effect waves-light btn right">
+          <button type="submit" className="waves-effect waves-light btn center">
             Add Client
           </button>
         </form>

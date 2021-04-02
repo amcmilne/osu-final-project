@@ -58,7 +58,12 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <footer>
+          <a href="https://www.iubenda.com/privacy-policy/47088602" class="iubenda-white iubenda-embed"
+    title="Privacy Policy ">Privacy Policy</a>
+      </footer>
       </div>
+      
     );
   }
 }
