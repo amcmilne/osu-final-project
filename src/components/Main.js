@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./CSS/main.scss"
+
 
 function Main() {
     return (
       <div>
         <div className="container">
-          <h1>Main</h1>
           <div>
             <h2>Add New Bid</h2>
             <button>
