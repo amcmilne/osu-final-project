@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
 import "./CSS/paint.scss";
@@ -41,7 +40,6 @@ function Paint() {
             <option value="Standard">Standard</option>
             <option value="Premium">Premium</option>
           </select>
-          <br />
           <br />
           <h1>Paint Notes</h1>
           <textarea
