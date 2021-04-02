@@ -7,9 +7,16 @@ div.container{
     margin: 10% auto;
     box-shadow: .4px 3px 8px .8px black;
     padding: 2rem;
+    max-height: 33.5rem;
+    /* overflow: auto; */
 }
 
 body, html {
     background:url("../../firstpaint.jpg") fixed center;
     max-height: 80%;
+}
+
+div.myUl {
+    overflow: scroll;
+    height: 8rem;
 }
