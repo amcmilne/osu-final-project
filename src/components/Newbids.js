@@ -49,7 +49,7 @@ const Newbids = () => {
           <input
             type="text"
             className="item-address"
-            placeholder="Please include City and State"
+            placeholder="Please include City,State, and Zip"
             required
           />
           <label for="Email"> Email: </label>
