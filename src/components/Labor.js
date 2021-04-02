@@ -11,7 +11,7 @@ db.version(1).stores({
 });
 
 const Labor = () => {
-  //... variable to store clients
+  //... variable to store labor cost
   const laborCost = useLiveQuery(() => db.labor.toArray(), []);
   if (!laborCost) return null;
 
@@ -63,7 +63,7 @@ const Labor = () => {
           ></textarea>
           <br />
 
-          <button type="submit" className="waves-effect waves-light btn right">
+          <button type="submit" className="waves-effect waves-light btn center">
             Add Labor
           </button>
         </form>

@@ -1,31 +1,76 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import "./CSS/theme.css"
+import Dexie from "dexie";
+import { useLiveQuery } from "dexie-react-hooks";
+import "./CSS/theme.css";
+
+//... create db
+const db = new Dexie("paintDatabase");
+db.version(1).stores({
+  paint: "++id, quality, notes, squarefootage",
+});
 
 function Paint() {
-    return (
-        <div>
-            <div className="container">
+  //... variable to store oaint info
+  const paintInfo = useLiveQuery(() => db.paint.toArray(), []);
+  if (!paintInfo) return null;
 
-            <h1>Paint Quality</h1>
-            <select  name="Paint Quality">
-                 <option value="Affordable"> Affordable </option>
-                 <option value="Standard">Standard</option>
-                 <option value="Premium">Premium</option>
-             </select><br/><br/>
-             <h1>Paint Notes</h1> 
-             <textarea name="text" cols="25" rows="5" placeholder="Add text here!!"></textarea><br/><br/>
-             <h1> Sq Ft of House</h1>
-             <input placeholder="1500 sq ft"></input> <br/><br/>
- 
-             <div>
-                 <button> <Link to="/newbids"> Back</Link></button>
-                 <button> <Link to="/materials"> Materials</Link></button>
-             </div>
-             
-            </div>
+  //... add paint info
+  const addPaintToDb = async (event) => {
+    event.preventDefault();
+    const quality = document.querySelector(".item-quality").value;
+    const notes = document.querySelector(".item-notes").value;
+    const squarefootage = document.querySelector(".item-squarefootage").value;
+    await db.paint.add({
+      quality,
+      notes,
+      squarefootage,
+    });
+  };
+  return (
+    <div>
+      <div className="container">
+        <h1>Paint Quality</h1>
+        <form
+          className="add-item-form"
+          onSubmit={(event) => addPaintToDb(event)}
+        >
+          <select name="Paint Quality" className="item-quality">
+            <option value="Affordable"> Affordable </option>
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+          </select>
+          <br />
+          <br />
+          <h1>Paint Notes</h1>
+          <textarea
+            name="text"
+            cols="25"
+            rows="5"
+            className="item-notes"
+            placeholder="Add text here!!"
+          ></textarea>
+          <br />
+          <br />
+          <h1> Sq Ft of House</h1>
+          <input className="item-squarefootage" placeholder="1500 sq ft"></input> <br />
+          <br />
+          <button type="submit" className="waves-effect waves-light btn center">
+            Add Paint Info
+          </button>
+        </form>
+
+        <div>
+          <button>
+            <Link to="/newbids"> Back</Link>
+          </button>
+          <button>
+            <Link to="/materials"> Materials</Link>
+          </button>
         </div>
-    )
- }
- 
- export default Paint;
+      </div>
+    </div>
+  );
+}
+
+export default Paint;
