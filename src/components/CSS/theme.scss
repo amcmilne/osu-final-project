@@ -52,3 +52,10 @@ select {
     font-weight: 600;
     color: white;
 }
+img.myIMG {
+    border-radius: 50%;
+    border: #2bb9ab double 3px;
+    width: 8em;
+    background-position:  right center;
+    box-shadow: .5px, 3px, 8px, 5px white ;
+}
