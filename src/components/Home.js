@@ -8,7 +8,7 @@ class Home extends React.Component {
         <div class="container">
           <div>
             <h1 className="tc"> Paint Bid App</h1>
-            {/* <img className=" w-100 " src={companyLogo} alt="logo" /> */}
+             <img className="myIMG w-20 " src={image} alt="logo" /> 
             {/* <Link to="/main">Go to Main</Link> */}
           </div>
           <div></div>
