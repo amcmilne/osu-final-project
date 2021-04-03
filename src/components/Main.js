@@ -7,12 +7,12 @@ function Main() {
     return (
       <div>
         <div className="container">
-          <div>
-            <h2>Add New Bid</h2>
-            <button>
-              <Link to="/newbids"> Add Bid </Link>
-            </button>
+          
+          <h2>Add New Bid</h2>
+          <div className="ph3">
+            <Link to="/newbids"><span className="f6 grow no-underline br-pill ba bw2 ph3 pv2 mb2 dib dark-green"> Add Bid </span></Link>
           </div>
+          
           <h3>Search existing Bids</h3>
           <div className="myUl">
             <ul >

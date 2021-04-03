@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap');
 
 div.container{
+    color: white;
     text-align: center;
     border: 3px white solid;
     background-color: rgba(15, 31, 53, 0.52);
@@ -32,9 +33,22 @@ h1,h2,h3 {
     font-size: 1.2rem;
     font-weight: bolder;
 }
-a.ph3 {
+span.ph3 {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 2rem;
     background-color: white;
+}
+.btn {
+    background-color: #2bb9ab;
+}
+
+textarea {
+    background-color: rgba(0, 100, 110, 0.3);
+}
+
+select {
+    background-color: rgba(0, 100, 110, 0.3);
+    font-weight: 600;
+    color: white;
 }
