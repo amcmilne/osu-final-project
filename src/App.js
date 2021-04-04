@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route  } from "react-router-dom"; 
+import PrivateRoute from './components/PrivateRoute';
 //import Login from "./components/Login";
 import Home from "./components/Home";
 import Main from "./components/Main";
@@ -19,13 +20,13 @@ const App = () => {
         <Router>
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
-          <Route path="/main" component={Main} />
-          <Route path="/labor" component={Labor} />
-          <Route path="/Oldbids" component={Oldbids} />
-          <Route path="/Newbids" component={Newbids} />
-          <Route path="/Paint" component={Paint} />
-          <Route path="/Materials" component={Materials} />
-          <Route path="/Quote" component={Quote} />
+          <PrivateRoute path="/main" component={Main} />
+          <PrivateRoute path="/labor" component={Labor} />
+          <PrivateRoute path="/Oldbids" component={Oldbids} />
+          <PrivateRoute path="/Newbids" component={Newbids} />
+          <PrivateRoute path="/Paint" component={Paint} />
+          <PrivateRoute path="/Materials" component={Materials} />
+          <PrivateRoute path="/Quote" component={Quote} />
         </Router>
       </div>
     )
