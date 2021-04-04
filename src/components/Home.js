@@ -1,7 +1,6 @@
 import React from "react";
 import "../App.css";
 import image from "../img/painttwo.png";
-//import companyLogo from "../firstpaint.jpg";
 import Login from "./Login";
 
 class Home extends React.Component {
