@@ -4,7 +4,6 @@ import image from "../img/painttwo.png";
 //import companyLogo from "../firstpaint.jpg";
 import Login from "./Login";
 
-
 class Home extends React.Component {
   render() {
     return (
@@ -13,7 +12,6 @@ class Home extends React.Component {
           <div>
             <h1 className="tc"> Paint Bid App</h1>
             <img className="myIMG w-20 " src={image} alt="logo" />
-            {/* <Link to="/main">Go to Main</Link> */}
           </div>
           <br></br>
           <div className="container-fluid">

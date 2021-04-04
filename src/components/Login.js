@@ -1,6 +1,5 @@
 import React from "react";
 import { GoogleLogin } from "react-google-login";
-// refresh token
 import { refreshTokenSetup } from "../utils/refreshToken";
 import { login } from '../utils/authenticationService';
 

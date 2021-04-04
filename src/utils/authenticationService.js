@@ -1,11 +1,11 @@
-const TOKEN_KEY = 'paintAppToken';
+const token_key = 'paintAppToken';
 
 export const login = (user) => {
-    localStorage.setItem(TOKEN_KEY, user);    
+    localStorage.setItem(token_key, user);    
 }
 
 export const isLoggedIn = () => {
-    if (localStorage.getItem(TOKEN_KEY)) {
+    if (localStorage.getItem(token_key)) {
         return true;
     }
 
