@@ -15,6 +15,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 6.) [License](#license)
 
+## Usage
+
+To use this:
+
+1.) Download OR clone this repository
+
+2.) Run npm i to install dependencies
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
