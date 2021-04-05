@@ -1,3 +1,20 @@
+# Paint Bid App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Table of Contents
+1.) [Usage](#usage)
+
+2.) [Installation](#installation)
+
+3.) [Credits](#credits)
+
+4.) [Contributing](#contributing)
+
+5.) [Questions/Contact](#questions/contact)
+
+6.) [License](#license)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
