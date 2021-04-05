@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
-//import "./CSS/newbids.scss";
+import "./CSS/newbids.scss";
 
 //... create db
 const db = new Dexie("bidDatabase");
