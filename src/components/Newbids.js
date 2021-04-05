@@ -1,9 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Dexie from "dexie";
 import { useLiveQuery } from "dexie-react-hooks";
-import "./CSS/newbids.scss";
-import Mobilenav from "../components/Mobilenav"
-
+//import "./CSS/newbids.scss";
 
 //... create db
 const db = new Dexie("bidDatabase");
@@ -28,6 +27,25 @@ const Newbids = () => {
       email,
     });
   };
+  const clientData = allClients.map(({ id, name, address, email }) => (
+    <div className="row" key={id}>
+      <p className="col s3">
+        <label>
+          <span className="black-text">{name}</span>
+        </label>
+      </p>
+      <p className="col s3">
+        <label>
+          <span className="black-text">{address}</span>
+        </label>
+      </p>
+      <p className="col s3">
+        <label>
+          <span className="black-text">{email}</span>
+        </label>
+      </p>
+    </div>
+  ));
 
   return (
     <div>
@@ -44,7 +62,7 @@ const Newbids = () => {
             placeholder="First and Last Name"
             required
           />
-           <label for="Address"> Street Address: </label>
+          <label for="Address"> Street Address: </label>
           <input
             type="text"
             className="item-address"
@@ -62,7 +80,19 @@ const Newbids = () => {
             Add Client
           </button>
         </form>
-        <Mobilenav back="/main" next="/paint" name="Paint"/>
+        {allClients.length > 0 && (
+          <div className="card white darken-1">
+            <div className="card-content">
+              <form action="#">{clientData}</form>
+            </div>
+          </div>
+        )}
+        <button>
+          <Link to="/main"> Back</Link>
+        </button>
+        <button>
+          <Link to="/paint"> Paint</Link>
+        </button>
       </div>
     </div>
   );
