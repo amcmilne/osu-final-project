@@ -23,6 +23,17 @@ To use this:
 
 2.) Run npm i to install dependencies
 
+3.) Run npm start to run the app in development mode
+
+You'll need to have MySQL installed.
+
+The Paint Bid App can be accessed here:
+[Paint Bid App](https://painter-bid-app.herokuapp.com/)
+
+## Installation
+
+The user will need to have Node.js, ExpressJS, Sequelize, and MySQL installed. MySQL Workbench is useful for accessing schema. Dependencies are listed in package.json. Be sure to npm i to install all dependencies!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
