@@ -1,3 +1,70 @@
+# Paint Bid App
+
+The Paint Bid App improves the bid process for Paint professionals.
+
+## Table of Contents
+1.) [Usage](#usage)
+
+2.) [Installation](#installation)
+
+3.) [Credits](#credits)
+
+4.) [Contact/Questions](#contact/questions)
+
+5.) [License](#license)
+
+## Usage
+
+To use this:
+
+1.) Download OR clone this repository
+
+2.) Run npm i to install dependencies
+
+3.) Run npm start to run the app in development mode
+
+The Paint Bid App can be accessed here:
+[Paint Bid App](https://painter-bid-app.herokuapp.com/)
+
+## Installation
+
+The user will need to have React, Tachyons, Sass, Dexie, Node.js, ExpressJS, Sequelize, and MySQL2 installed. MySQL Workbench is useful for accessing schema. Dependencies are listed in package.json. Be sure to npm i to install all dependencies!
+
+## Credits
+
+The following technologies and resources were used in the development of this application:
+
+Tachyons [Tachyons](https://tachyons.io)
+
+Sass [Sass](https://sass-lang.com)
+
+Mozilla Developers Network [MDN](https://developer.mozilla.org/en-US/)
+
+Heroku [Heroku](https://www.heroku.com)
+
+Sequelize [Sequelize](https://sequelize.org)
+
+MySQL2 [MySQL2](https://www.npmjs.com/package/mysql2)
+
+Dexie React Hooks [Dexie](https://dexie.org/docs/libs/dexie-react-hooks)
+
+React Google Login [react-google-login](https://www.npmjs.com/package/react-google-login)
+
+## Contact/Questions
+
+This repository is owned and built by:
+
+Abdinajib Liban - abdinajibliban - abdinajibliban@gmail.com
+
+Ann Cooper-Milne - amcmilne - amcmilne@gmail.com
+
+Thomas Whittle - settc - tewhittle@gmail.com
+
+## License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+MIT License
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
