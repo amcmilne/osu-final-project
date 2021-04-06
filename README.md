@@ -24,7 +24,7 @@ To use this:
 3.) Run npm start to run the app in development mode
 
 The Paint Bid App can be accessed here:
-[Paint Bid App](https://painter-bid-app.herokuapp.com/)
+[Paint Bid App](https://painter-bid-app.herokuapp.com)
 
 ## Installation
 
