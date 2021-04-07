@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap');
+
+div.container{
+    color: white;
+    text-align: center;
+    border: 3px white solid;
+    background-color: rgba(15, 31, 53, 0.52);
+    border-radius: 2rem;
+    margin: 10% auto;
+    box-shadow: .1px 3px 120px 5px black;
+    padding: 2rem;
+    max-height: 33.5rem;
+    /* overflow: auto; */
+}
+
+body, html {
+    background:url("../../firstpaint.jpg") fixed center;
+    max-height: 80%;
+    font-family: 'Raleway', sans-serif;
+}
+
+div.myUl {
+    overflow: scroll;
+    height: 8rem;
+}
+h1,h2,h3 {
+    color: white;
+    font-family: 'Righteous', cursive;
+    text-shadow:  3px 6px  black;
+}
+.add-item-form > label {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+span.ph3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+.btn {
+    background-color: #2bb9ab;
+}
+
+textarea {
+    background-color: rgba(0, 100, 110, 0.3);
+}
+
+select {
+    background-color: rgba(0, 100, 110, 0.3);
+    font-weight: 600;
+    color: white;
+}
+img.myIMG {
+    border-radius: 50%;
+    border: #2bb9ab double 3px;
+    width: 8em;
+    background-position:  right center;
+    box-shadow: .5px, 3px, 8px, 5px white ;
+}
