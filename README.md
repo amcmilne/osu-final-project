@@ -1,6 +1,7 @@
 # Paint Bid App
 
 The Paint Bid App improves the bid process for Paint professionals.
+<img src="./public/React%20App.gif"></img>
 
 ## Table of Contents
 1.) [Usage](#usage)
